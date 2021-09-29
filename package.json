@@ -1,0 +1,57 @@
+{
+  "name": "scripting-api-rewrite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "prepare": "npm run build",
+    "build": "rollup -c",
+    "start": "webpack-dev-server --mode development --host 0.0.0.0",
+    "start_build": "cd lib && python2.7 -m SimpleHTTPServer"
+  },
+  "files": [
+    "lib"
+  ],
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testRegex": "^.+\\.spec\\.ts$"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@swc/cli": "^0.1.50",
+    "@swc/core": "^1.2.88",
+    "@types/html-webpack-plugin": "^3.2.6",
+    "@types/jest": "^27.0.1",
+    "@types/rollup-plugin-node-builtins": "^2.1.2",
+    "@types/rollup-plugin-node-globals": "^1.4.1",
+    "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.2.1",
+    "rollup": "^2.56.3",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0",
+    "rollup-plugin-swc": "^0.2.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "ts-jest": "^27.0.5",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.3",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.1"
+  },
+  "dependencies": {
+    "pixi.js": "^6.1.3"
+  }
+}

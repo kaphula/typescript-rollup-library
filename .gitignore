@@ -1,0 +1,7 @@
+# lib/
+.idea/
+node_modules/
+remote-profile/
+build/
+yarn-error.log
+/index.html
